@@ -20,10 +20,10 @@ media:
     output: assets/apps
     categories: [image]
   - name: apk
-    label: Fichiers APK
+    label: Fichiers à télécharger (APK, EXE, MSI, ZIP)
     input: telechargements
     output: telechargements
-    extensions: [apk]
+    extensions: [apk, exe, msi, zip]
 
 content:
   # ---------------------------------------------------------
@@ -71,12 +71,12 @@ content:
         label: Lien Google Play (facultatif)
         type: string
       - name: apk
-        label: Fichier APK à télécharger (facultatif)
+        label: Fichier à télécharger — APK (Android) ou EXE / MSI / ZIP (Windows) (facultatif)
         type: file
         options:
           media: apk
       - name: lienApk
-        label: "Ou lien externe vers l'APK (ex. GitHub Releases), si le fichier est trop gros"
+        label: "Ou lien externe vers le fichier (ex. GitHub Releases), s'il est trop gros"
         type: string
       - name: politiqueDate
         label: Date de mise à jour de la politique de confidentialité
@@ -195,6 +195,34 @@ content:
       - { name: minVersionCode, label: "minVersionCode (en dessous : mise à jour obligatoire)", type: number }
       - { name: apkUrl, label: "Lien direct de l'APK", type: string }
       - { name: playStoreUrl, label: "Lien Google Play", type: string }
+      - { name: privacyPolicyUrl, label: "Lien de la politique de confidentialité", type: string }
+      - name: releaseDate
+        label: Date de sortie
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: changelog
+        label: Nouveautés
+        type: object
+        fields:
+          - { name: fr, label: "Français", type: string, list: true }
+          - { name: en, label: "Anglais", type: string, list: true }
+          - { name: ar, label: "Arabe", type: string, list: true }
+
+  # ---------------------------------------------------------
+  # MISE À JOUR DU LOGICIEL HOTSPOT EXPRESS (Windows)
+  # ---------------------------------------------------------
+  - name: version-hotspot-express
+    label: "Mise à jour — Hotspot Express"
+    type: file
+    path: apps/hotspot-express/version.json
+    format: json
+    fields:
+      - { name: app, label: "Nom du logiciel", type: string }
+      - { name: versionCode, label: "versionCode (nombre entier, à augmenter à chaque version)", type: number, required: true }
+      - { name: versionName, label: "versionName (ex. 1.2.0)", type: string, required: true }
+      - { name: minVersionCode, label: "minVersionCode (en dessous : mise à jour obligatoire)", type: number }
+      - { name: downloadUrl, label: "Lien direct du fichier d'installation (EXE / MSI / ZIP)", type: string }
       - { name: privacyPolicyUrl, label: "Lien de la politique de confidentialité", type: string }
       - name: releaseDate
         label: Date de sortie
