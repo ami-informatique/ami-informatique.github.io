@@ -1,0 +1,14 @@
+{
+  "app": "Hotspot Express",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "minVersionCode": 1,
+  "downloadUrl": "",
+  "privacyPolicyUrl": "https://ami-informatique.github.io/confidentialite-app.html?app=hotspot-express",
+  "releaseDate": "2026-11-09",
+  "changelog": {
+    "fr": ["Première version publique"],
+    "en": ["First public release"],
+    "ar": ["الإصدار العام الأول"]
+  }
+}

@@ -31,7 +31,8 @@
 
     var boutons = "";
     if (!app.bientot && app.playStore) boutons += '<a class="btn btn-play" href="' + esc(app.playStore) + '" target="_blank" rel="noopener">' + ICONE_PLAY + esc(t("apps.play")) + "</a>";
-    if (!app.bientot && app.apk) boutons += '<a class="btn ' + (app.playStore ? "btn-ghost" : "btn-primary") + '" href="' + esc(app.apk) + '" download>' + ICONE_DL + esc(t("apps.apk")) + "</a>";
+    var libelleDl = /\.apk(\?|#|$)/i.test(app.apk) ? t("apps.apk") : t("app.download");
+    if (!app.bientot && app.apk) boutons += '<a class="btn ' + (app.playStore ? "btn-ghost" : "btn-primary") + '" href="' + esc(app.apk) + '" download>' + ICONE_DL + esc(libelleDl) + "</a>";
     if (!boutons) boutons = '<span class="btn" aria-disabled="true">' + esc(t("apps.soonBtn")) + "</span>";
 
     vue.innerHTML =
