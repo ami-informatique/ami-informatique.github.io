@@ -1,0 +1,210 @@
+# =========================================================
+# Configuration de l'interface d'administration Pages CMS
+# Connexion : https://app.pagescms.org (avec votre compte GitHub)
+# =========================================================
+
+media:
+  - name: photos
+    label: Photos des actualités
+    input: assets/actualites
+    output: assets/actualites
+    categories: [image]
+  - name: documents
+    label: Documents (PDF…)
+    input: documents
+    output: documents
+    categories: [document]
+  - name: icones
+    label: Icônes des applications
+    input: assets/apps
+    output: assets/apps
+    categories: [image]
+  - name: apk
+    label: Fichiers APK
+    input: telechargements
+    output: telechargements
+    extensions: [apk]
+
+content:
+  # ---------------------------------------------------------
+  # APPLICATIONS (ajout, modification, suppression)
+  # ---------------------------------------------------------
+  - name: applications
+    label: Applications
+    type: file
+    path: data/applications.json
+    format: json
+    list: true
+    fields:
+      - name: nom
+        label: Nom de l'application
+        type: string
+        required: true
+      - name: id
+        label: "Identifiant (minuscules, sans espace, ex. ami-ticket) — sert dans les liens, ne plus le changer après publication"
+        type: string
+        required: true
+      - name: plateforme
+        label: Plateforme
+        type: select
+        options:
+          values: [Android, Windows, Web, iOS]
+      - name: version
+        label: Version affichée (ex. 1.0.0)
+        type: string
+      - name: icone
+        label: Icône (image carrée)
+        type: image
+        options:
+          media: icones
+      - name: description
+        label: Description courte
+        type: object
+        fields:
+          - { name: fr, label: "Français", type: text, required: true }
+          - { name: en, label: "Anglais (facultatif)", type: text }
+          - { name: ar, label: "Arabe (facultatif)", type: text }
+      - name: bientot
+        label: "« Bientôt disponible » (cochez tant que l'application n'est pas téléchargeable)"
+        type: boolean
+      - name: playStore
+        label: Lien Google Play (facultatif)
+        type: string
+      - name: apk
+        label: Fichier APK à télécharger (facultatif)
+        type: file
+        options:
+          media: apk
+      - name: lienApk
+        label: "Ou lien externe vers l'APK (ex. GitHub Releases), si le fichier est trop gros"
+        type: string
+      - name: politiqueDate
+        label: Date de mise à jour de la politique de confidentialité
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: politique
+        label: Politique de confidentialité
+        type: object
+        fields:
+          - { name: fr, label: "Français", type: rich-text }
+          - { name: en, label: "Anglais (facultatif)", type: rich-text }
+          - { name: ar, label: "Arabe (facultatif)", type: rich-text }
+      - name: commentaires
+        label: "Commentaires publiés (copiez ici ceux reçus par e-mail que vous approuvez)"
+        type: object
+        list: true
+        fields:
+          - { name: nom, label: "Nom", type: string, required: true }
+          - name: date
+            label: Date
+            type: date
+            options:
+              format: yyyy-MM-dd
+          - name: note
+            label: Note (étoiles)
+            type: select
+            options:
+              values: ["", "1", "2", "3", "4", "5"]
+          - { name: texte, label: "Commentaire", type: text, required: true }
+          - { name: reponse, label: "Réponse d'AMI Informatique (facultatif)", type: text }
+
+  # ---------------------------------------------------------
+  # ACTUALITÉS
+  # ---------------------------------------------------------
+  - name: actualites
+    label: Actualités
+    type: file
+    path: data/actualites.json
+    format: json
+    list: true
+    fields:
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: categorie
+        label: Catégorie
+        type: select
+        required: true
+        options:
+          values:
+            - { name: attestation, label: "Remise d'attestations" }
+            - { name: formation, label: "Formation" }
+            - { name: annonce, label: "Annonce" }
+            - { name: evenement, label: "Événement" }
+            - { name: realisation, label: "Réalisation" }
+      - name: titre
+        label: Titre
+        type: object
+        fields:
+          - { name: fr, label: "Titre en français", type: string, required: true }
+          - { name: en, label: "Titre en anglais (facultatif)", type: string }
+          - { name: ar, label: "Titre en arabe (facultatif)", type: string }
+      - name: texte
+        label: Texte
+        type: object
+        fields:
+          - { name: fr, label: "Texte en français", type: text, required: true }
+          - { name: en, label: "Texte en anglais (facultatif)", type: text }
+          - { name: ar, label: "Texte en arabe (facultatif)", type: text }
+      - name: photos
+        label: Photos (la première sert de photo principale)
+        type: image
+        options:
+          media: photos
+          multiple:
+            max: 30
+      - name: documents
+        label: Documents à télécharger
+        type: object
+        list: true
+        fields:
+          - name: nom
+            label: Nom affiché
+            type: object
+            fields:
+              - { name: fr, label: "Nom en français", type: string, required: true }
+              - { name: en, label: "Nom en anglais (facultatif)", type: string }
+              - { name: ar, label: "Nom en arabe (facultatif)", type: string }
+          - name: fichier
+            label: Fichier
+            type: file
+            required: true
+            options:
+              media: documents
+      - name: id
+        label: Identifiant (facultatif, pour un lien direct, ex. attestations-dec-2026)
+        type: string
+
+  # ---------------------------------------------------------
+  # MISE À JOUR DE L'APPLICATION AMI TICKET (lu par l'application Android)
+  # Pour une nouvelle application, copiez ce bloc et changez name, label et path.
+  # ---------------------------------------------------------
+  - name: version-ami-ticket
+    label: "Mise à jour — AMI Ticket"
+    type: file
+    path: apps/ami-ticket/version.json
+    format: json
+    fields:
+      - { name: app, label: "Nom de l'application", type: string }
+      - { name: versionCode, label: "versionCode (nombre entier, à augmenter à chaque version)", type: number, required: true }
+      - { name: versionName, label: "versionName (ex. 1.2.0)", type: string, required: true }
+      - { name: minVersionCode, label: "minVersionCode (en dessous : mise à jour obligatoire)", type: number }
+      - { name: apkUrl, label: "Lien direct de l'APK", type: string }
+      - { name: playStoreUrl, label: "Lien Google Play", type: string }
+      - { name: privacyPolicyUrl, label: "Lien de la politique de confidentialité", type: string }
+      - name: releaseDate
+        label: Date de sortie
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: changelog
+        label: Nouveautés
+        type: object
+        fields:
+          - { name: fr, label: "Français", type: string, list: true }
+          - { name: en, label: "Anglais", type: string, list: true }
+          - { name: ar, label: "Arabe", type: string, list: true }
