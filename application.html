@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Application — AMI Informatique</title>
+  <meta name="theme-color" content="#0B3C66">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Cairo:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () { try {
+      var m = /[?&]lang=(fr|en|ar)\b/.exec(location.search), l = m ? m[1] : localStorage.getItem("ami-lang");
+      if (l === "en" || l === "ar") { document.documentElement.lang = l; document.documentElement.dir = l === "ar" ? "rtl" : "ltr"; }
+    } catch (e) {} })();
+  </script>
+</head>
+<body>
+  <!-- Page générique : application.html?app=IDENTIFIANT (contenu tiré de data/applications.json) -->
+  <header class="site-header legal-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" data-i18n-attr="aria-label:brand.home">
+        <img src="assets/img/favicon.png" alt="" width="36" height="36">
+        <span class="brand-text"><span class="brand-ami">AMI</span> Informatique</span>
+      </a>
+      <div class="header-actions">
+        <a href="index.html#applications" class="legal-back legal-back-top" data-i18n="app.back">← Toutes les applications</a>
+        <div class="lang">
+          <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" data-i18n-attr="aria-label:lang.label">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-3a15.7 15.7 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8ZM12 4a14 14 0 0 1 1.9 4h-3.8A14 14 0 0 1 12 4ZM4.3 14a8 8 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4H4.3Zm.8 2h3a15.7 15.7 0 0 0 1.4 3.6A8 8 0 0 1 5.1 16Zm3-8h-3a8 8 0 0 1 4.4-3.6A15.7 15.7 0 0 0 8.1 8ZM12 20a14 14 0 0 1-1.9-4h3.8A14 14 0 0 1 12 20Zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4Zm.2 5.6a15.7 15.7 0 0 0 1.4-3.6h3a8 8 0 0 1-4.4 3.6Zm1.8-5.6a16.5 16.5 0 0 0 0-4h3.4a8 8 0 0 1 0 4h-3.4Z"/></svg>
+            <span data-lang-current>FR</span>
+          </button>
+          <ul class="lang-menu" hidden>
+            <li><button type="button" data-set-lang="fr" lang="fr">Français</button></li>
+            <li><button type="button" data-set-lang="en" lang="en">English</button></li>
+            <li><button type="button" data-set-lang="ar" lang="ar" dir="rtl">العربية</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-page">
+    <div class="container">
+      <div id="app-view" aria-live="polite"></div>
+
+      <!-- Commentaires -->
+      <section class="comments" id="commentaires" hidden>
+        <h2 class="section-title" data-i18n="app.comments">Commentaires</h2>
+        <div id="comments-summary" class="comments-summary"></div>
+        <div id="comments-list" class="comments-list"></div>
+
+        <form id="comment-form" class="comment-form" novalidate>
+          <h3 data-i18n="app.leave">Laisser un commentaire</h3>
+          <p class="comment-note" data-i18n="app.moderated">Les commentaires sont publiés après validation par AMI Informatique.</p>
+          <label class="field">
+            <span data-i18n="app.name">Votre nom *</span>
+            <input type="text" name="nom" required maxlength="60" autocomplete="name">
+          </label>
+          <fieldset class="field stars-field">
+            <legend data-i18n="app.rating">Votre note (facultatif)</legend>
+            <div class="stars-input">
+              <input type="radio" name="note" id="n5" value="5"><label for="n5" title="5">★</label>
+              <input type="radio" name="note" id="n4" value="4"><label for="n4" title="4">★</label>
+              <input type="radio" name="note" id="n3" value="3"><label for="n3" title="3">★</label>
+              <input type="radio" name="note" id="n2" value="2"><label for="n2" title="2">★</label>
+              <input type="radio" name="note" id="n1" value="1"><label for="n1" title="1">★</label>
+            </div>
+          </fieldset>
+          <label class="field">
+            <span data-i18n="app.comment">Votre commentaire *</span>
+            <textarea name="texte" rows="4" required maxlength="1500"></textarea>
+          </label>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <p class="devis-error" id="comment-error" role="alert" hidden></p>
+          <button type="submit" class="btn btn-primary" id="comment-send" data-i18n="app.send">Envoyer le commentaire</button>
+        </form>
+        <div id="comment-ok" class="comment-ok" hidden>
+          <div class="devis-ok-icon" aria-hidden="true">✓</div>
+          <p data-i18n="app.thanks">Merci ! Votre commentaire sera publié après validation.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><span class="brand-ami">AMI</span> Informatique</p>
+      <p class="footer-copy">© <span id="year">2026</span> AMI Informatique · <span data-i18n="footer.city">Maradi, Niger</span> · <a href="confidentialite.html" data-i18n="footer.privacy">Politique de confidentialité</a></p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/apps-data.js"></script>
+  <script src="js/app-page.js"></script>
+</body>
+</html>

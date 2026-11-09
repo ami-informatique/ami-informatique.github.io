@@ -1,0 +1,19 @@
+[
+  {
+    "id": "lancement-site-web",
+    "date": "2026-11-06",
+    "categorie": "annonce",
+    "titre": {
+      "fr": "Lancement de notre site web",
+      "en": "Our website is live",
+      "ar": "إطلاق موقعنا الإلكتروني"
+    },
+    "texte": {
+      "fr": "AMI Informatique a désormais son site web, en français, en anglais et en arabe. Vous y trouverez nos services (maintenance, réseaux, génie logiciel, sites web et formation), nos applications, et vous pouvez demander un devis gratuit en ligne.\n\nCette rubrique publiera nos prochaines formations, les remises d'attestations et nos réalisations.",
+      "en": "AMI Informatique now has its own website, in French, English and Arabic. You'll find our services (maintenance, networking, software engineering, websites and training), our apps, and you can request a free quote online.\n\nThis section will feature our upcoming training sessions, certificate ceremonies and projects.",
+      "ar": "أصبح لدى AMI Informatique موقعها الإلكتروني الخاص، باللغات الفرنسية والإنجليزية والعربية. ستجدون فيه خدماتنا (الصيانة، والشبكات، وهندسة البرمجيات، والمواقع الإلكترونية، والتكوين)، وتطبيقاتنا، ويمكنكم طلب عرض سعر مجاني عبر الإنترنت.\n\nسننشر في هذا القسم دوراتنا التكوينية القادمة، وحفلات تسليم الشهادات، وإنجازاتنا."
+    },
+    "photos": [],
+    "documents": []
+  }
+]

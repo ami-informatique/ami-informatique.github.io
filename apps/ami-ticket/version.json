@@ -1,0 +1,15 @@
+{
+  "app": "AMI Ticket",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "minVersionCode": 1,
+  "apkUrl": "",
+  "playStoreUrl": "",
+  "privacyPolicyUrl": "https://ami-informatique.github.io/confidentialite-app.html?app=ami-ticket",
+  "releaseDate": "2026-11-04",
+  "changelog": {
+    "fr": ["Première version publique"],
+    "en": ["First public release"],
+    "ar": ["الإصدار العام الأول"]
+  }
+}

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">AMI Informatique — Maradi, Niger</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="AMI Informatique, votre partenaire numérique de confiance à Maradi (Niger) depuis 2017 : maintenance informatique, réseaux, génie logiciel, création de sites web et formation.">
+  <meta property="og:title" content="AMI Informatique">
+  <meta property="og:description" content="Votre partenaire numérique de confiance, des solutions fiables à portée de main.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <meta name="theme-color" content="#0B3C66">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Cairo:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Applique la langue mémorisée avant l'affichage (évite un « flash » en français) */
+    (function () { try {
+      var m = /[?&]lang=(fr|en|ar)\b/.exec(location.search), l = m ? m[1] : localStorage.getItem("ami-lang");
+      if (l === "en" || l === "ar") { document.documentElement.lang = l; document.documentElement.dir = l === "ar" ? "rtl" : "ltr"; }
+    } catch (e) {} })();
+  </script>
+</head>
+<body>
+
+  <!-- ============ EN-TÊTE ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="AMI Informatique — accueil" data-i18n-attr="aria-label:brand.home">
+        <img src="assets/img/favicon.png" alt="" width="36" height="36">
+        <span class="brand-text"><span class="brand-ami">AMI</span> Informatique</span>
+      </a>
+      <nav id="nav" class="nav" aria-label="Navigation principale" data-i18n-attr="aria-label:nav.label">
+        <a href="#top" data-i18n="nav.home">Accueil</a>
+        <a href="#apropos" data-i18n="nav.about">À propos</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#applications" data-i18n="nav.apps">Applications</a>
+        <a href="#actualites" data-i18n="nav.news">Actualités</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang">
+          <button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Langue" data-i18n-attr="aria-label:lang.label">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-3a15.7 15.7 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8ZM12 4a14 14 0 0 1 1.9 4h-3.8A14 14 0 0 1 12 4ZM4.3 14a8 8 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4H4.3Zm.8 2h3a15.7 15.7 0 0 0 1.4 3.6A8 8 0 0 1 5.1 16Zm3-8h-3a8 8 0 0 1 4.4-3.6A15.7 15.7 0 0 0 8.1 8ZM12 20a14 14 0 0 1-1.9-4h3.8A14 14 0 0 1 12 20Zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4Zm.2 5.6a15.7 15.7 0 0 0 1.4-3.6h3a8 8 0 0 1-4.4 3.6Zm1.8-5.6a16.5 16.5 0 0 0 0-4h3.4a8 8 0 0 1 0 4h-3.4Z"/></svg>
+            <span data-lang-current>FR</span>
+          </button>
+          <ul class="lang-menu" hidden>
+            <li><button type="button" data-set-lang="fr" lang="fr">Français</button></li>
+            <li><button type="button" data-set-lang="en" lang="en">English</button></li>
+            <li><button type="button" data-set-lang="ar" lang="ar" dir="rtl">العربية</button></li>
+          </ul>
+        </div>
+        <button type="button" class="btn-devis" data-open-devis>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5L14 3.5ZM8 12v2h8v-2H8Zm0 4v2h5v-2H8Z"/></svg>
+          <span class="devis-long" data-i18n="cta.quote">Demander un devis</span><span class="devis-short" data-i18n="cta.quoteShort">Devis</span>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu" data-i18n-attr="aria-label:nav.open">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HÉRO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Atelier de Maintenance Informatique · Maradi, Niger</p>
+          <h1 class="hero-title"><span class="hero-ami">AMI</span> Informatique</h1>
+          <p class="hero-slogan" data-i18n="hero.slogan">Votre partenaire numérique de confiance, des solutions fiables à portée de main.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/22792911341" class="btn btn-primary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3Z"/></svg>
+              <span data-i18n="hero.wa">Écrire sur WhatsApp</span>
+            </a>
+            <button type="button" class="btn btn-ghost" data-open-devis data-i18n="cta.quoteFree">Demander un devis gratuit</button>
+          </div>
+        </div>
+        <div class="hero-logo">
+          <img src="assets/img/logo.png" alt="Logo AMI Informatique — Atelier de Maintenance Informatique" data-i18n-attr="alt:hero.logoAlt" width="423" height="264">
+        </div>
+      </div>
+      <div class="container">
+        <ul class="hero-facts">
+          <li><strong data-i18n="facts.since.t">Depuis 2017</strong><span data-i18n="facts.since.d">Créée en décembre 2017</span></li>
+          <li><strong data-i18n="facts.city.t">Maradi</strong><span data-i18n="facts.city.d">Basée au Niger</span></li>
+          <li><strong data-i18n="facts.jobs.t">5 métiers</strong><span data-i18n="facts.jobs.d">Matériel, réseaux, logiciel, web, formation</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ À PROPOS ============ -->
+    <section class="section" id="apropos">
+      <div class="container about">
+        <div>
+          <p class="section-kicker" data-i18n="about.kicker">À propos</p>
+          <h2 class="section-title" data-i18n="about.title">Un atelier local, une exigence professionnelle</h2>
+        </div>
+        <div class="about-body">
+          <p data-i18n-html="about.p1">Fondée en <strong>décembre 2017</strong> à <strong>Maradi</strong>, AMI Informatique accompagne particuliers, commerces, écoles et administrations dans tout ce qui touche à l'informatique : du dépannage d'un ordinateur à la mise en place d'un réseau, jusqu'à la conception de logiciels et de sites web sur mesure.</p>
+          <p data-i18n="about.p2">Notre approche est simple : un diagnostic honnête, des réparations soignées et des solutions durables, adaptées à la réalité de nos clients.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <p class="section-kicker" data-i18n="services.kicker">Nos services</p>
+        <h2 class="section-title" data-i18n="services.title">Ce que nous faisons pour vous</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6Z"/></svg>
+            </div>
+            <h3 data-i18n="s1.t">Maintenance informatique</h3>
+            <p data-i18n="s1.d">Diagnostic, réparation et entretien d'ordinateurs portables, de bureau et d'imprimantes. Installation de systèmes, suppression de virus, récupération de données.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v4h-1v3h6v4h1v4h-4v-4h1v-2H7v2h1v4H4v-4h1v-4h6V7h-1V3Z"/></svg>
+            </div>
+            <h3 data-i18n="s2.t">Réseaux informatiques</h3>
+            <p data-i18n="s2.d">Conception, câblage et configuration de réseaux locaux et Wi-Fi pour bureaux, écoles et commerces. Partage de connexion, sécurité et dépannage.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.6 16.6-4.6-4.6 4.6-4.6L7.2 6 1.2 12l6 6 1.4-1.4Zm6.8 0 4.6-4.6-4.6-4.6L16.8 6l6 6-6 6-1.4-1.4Z"/></svg>
+            </div>
+            <h3 data-i18n="s3.t">Génie logiciel</h3>
+            <p data-i18n="s3.d">Développement d'applications mobiles et de logiciels de gestion adaptés à vos besoins : billetterie, caisse, suivi de stock, gestion de clientèle.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm1 5v9h16V9H4Zm1-3v1.5h2V6H5Zm3 0v1.5h2V6H8Z"/></svg>
+            </div>
+            <h3 data-i18n="s4.t">Création de sites web</h3>
+            <p data-i18n="s4.d">Sites vitrines modernes, rapides et adaptés aux téléphones, pour présenter votre activité et être trouvé facilement sur Internet.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm-6 10.2V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-3.8l-6 3.3-6-3.3Z"/></svg>
+            </div>
+            <h3 data-i18n="s5.t">Formation</h3>
+            <p data-i18n="s5.d">Formations en bureautique (Word, Excel, PowerPoint, Internet), en maintenance informatique et en réseaux informatiques, pour particuliers, élèves et entreprises, de l'initiation au perfectionnement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPLICATIONS ============ -->
+    <section class="section" id="applications">
+      <div class="container">
+        <p class="section-kicker" data-i18n="apps.kicker">Nos applications</p>
+        <h2 class="section-title" data-i18n="apps.title">Des outils conçus par AMI Informatique</h2>
+        <p class="section-lead" data-i18n="apps.lead">Nos applications développées en interne, disponibles sur Google Play ou en téléchargement direct.</p>
+        <!-- Les cartes sont générées automatiquement à partir de data/applications.json (géré dans l'administration) -->
+        <div class="apps-grid" id="apps-grid" aria-live="polite"></div>
+        <noscript><p data-i18n="apps.noscript">Activez JavaScript pour voir la liste de nos applications.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ============ ACTUALITÉS ============ -->
+    <section class="section section-alt" id="actualites">
+      <div class="container">
+        <p class="section-kicker" data-i18n="news.kicker">Actualités</p>
+        <h2 class="section-title" data-i18n="news.title">Annonces et réalisations</h2>
+        <p class="section-lead" data-i18n="news.lead">Formations, remises d'attestations, annonces et réalisations : suivez la vie d'AMI Informatique.</p>
+        <!-- Les actualités sont générées automatiquement à partir de js/actualites.js -->
+        <div class="news-grid" id="news-grid"></div>
+        <div class="news-more-wrap"><button type="button" class="btn btn-ghost" id="news-all" hidden data-i18n="news.showAll">Voir toutes les actualités</button></div>
+        <div class="news-follow" id="news-follow" hidden>
+          <div>
+            <h3 data-i18n="news.follow.title">Restez informé</h3>
+            <p data-i18n="news.follow.text">Abonnez-vous pour recevoir nos annonces.</p>
+          </div>
+          <div class="news-follow-actions" id="news-follow-actions"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <p class="section-kicker kicker-light" data-i18n="contact.kicker">Contact</p>
+        <h2 class="section-title title-light" data-i18n="contact.title">Parlons de votre projet</h2>
+        <div class="contact-grid">
+          <a class="contact-card" href="https://wa.me/22792911341" target="_blank" rel="noopener">
+            <span class="contact-label" data-i18n="contact.wa">WhatsApp / Téléphone</span>
+            <span class="contact-value"><bdi>+227 92 91 13 41</bdi></span>
+          </a>
+          <a class="contact-card" href="mailto:amiinformatique2017@gmail.com">
+            <span class="contact-label" data-i18n="contact.email">E-mail</span>
+            <span class="contact-value"><bdi>amiinformatique2017@gmail.com</bdi></span>
+          </a>
+          <div class="contact-card">
+            <span class="contact-label" data-i18n="contact.address">Adresse</span>
+            <span class="contact-value" data-i18n="contact.addressVal">Maradi, Niger</span>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <p data-i18n="contact.cta">Un projet précis ? Recevez une estimation gratuite et sans engagement.</p>
+          <button type="button" class="btn-devis btn-devis-lg" data-open-devis data-i18n="cta.quote">Demander un devis</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIED DE PAGE ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand"><span class="brand-ami">AMI</span> Informatique</p>
+        <p class="footer-tag" data-i18n="footer.tag">Atelier de Maintenance Informatique — depuis décembre 2017</p>
+      </div>
+      <p class="footer-copy">© <span id="year">2026</span> AMI Informatique · <span data-i18n="footer.city">Maradi, Niger</span> · <a href="confidentialite.html" data-i18n="footer.privacy">Politique de confidentialité</a></p>
+    </div>
+  </footer>
+
+  <!-- ============ FENÊTRE « DEMANDER UN DEVIS » ============ -->
+  <dialog id="devis" class="devis-dialog" aria-labelledby="devis-title">
+    <form id="devis-form" class="devis-form" novalidate>
+      <div class="devis-head">
+        <div>
+          <p class="section-kicker" data-i18n="devis.kicker">Devis gratuit</p>
+          <h2 id="devis-title" data-i18n="devis.title">Demander un devis</h2>
+          <p class="devis-intro" data-i18n="devis.intro">Décrivez votre besoin : nous vous répondons rapidement, sans engagement.</p>
+        </div>
+        <button type="button" class="devis-close" data-close-devis aria-label="Fermer" data-i18n-attr="aria-label:devis.close">×</button>
+      </div>
+
+      <label class="field">
+        <span data-i18n="f.name">Nom complet *</span>
+        <input type="text" name="nom" required autocomplete="name">
+      </label>
+      <div class="field-row">
+        <label class="field">
+          <span data-i18n="f.phone">Téléphone / WhatsApp *</span>
+          <input type="tel" name="tel" required autocomplete="tel" placeholder="+227 ...">
+        </label>
+        <label class="field">
+          <span data-i18n="f.org">Entreprise / structure</span>
+          <input type="text" name="structure" autocomplete="organization" placeholder="Facultatif" data-i18n-attr="placeholder:f.optional">
+        </label>
+      </div>
+      <label class="field">
+        <span data-i18n="f.service">Service souhaité *</span>
+        <select name="service" required>
+          <option value="" data-i18n="f.choose">— Choisir —</option>
+          <option value="Maintenance informatique" data-i18n="opt.maint">Maintenance informatique</option>
+          <option value="Réseaux informatiques" data-i18n="opt.net">Réseaux informatiques</option>
+          <option value="Génie logiciel / application" data-i18n="opt.soft">Génie logiciel / application</option>
+          <option value="Création de site web" data-i18n="opt.web">Création de site web</option>
+          <option value="Formation" data-i18n="opt.train">Formation</option>
+          <option value="Autre" data-i18n="opt.other">Autre</option>
+        </select>
+      </label>
+      <label class="field">
+        <span data-i18n="f.need">Votre besoin *</span>
+        <textarea name="besoin" rows="4" required data-i18n-attr="placeholder:f.needPh" placeholder="Ex. : 5 ordinateurs à mettre en réseau dans un bureau, avec partage d'imprimante…"></textarea>
+      </label>
+      <p class="devis-error" id="devis-error" role="alert" hidden data-i18n="err.required">Merci de remplir les champs marqués *.</p>
+
+      <!-- Piège anti-spam : champ invisible, laissé vide par les humains -->
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+
+      <div class="devis-actions">
+        <button type="submit" class="btn btn-primary btn-send" value="envoi" data-i18n="btn.send">Envoyer la demande</button>
+        <button type="submit" class="btn btn-whatsapp" value="whatsapp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3Z"/></svg>
+          <span data-i18n="btn.wa">Plutôt par WhatsApp</span>
+        </button>
+      </div>
+    </form>
+
+    <div id="devis-ok" class="devis-ok" hidden>
+      <div class="devis-ok-icon" aria-hidden="true">✓</div>
+      <h2 data-i18n="ok.title">Demande envoyée</h2>
+      <p data-i18n="ok.text">Merci ! Nous avons bien reçu votre demande et vous recontactons rapidement, généralement par téléphone ou WhatsApp.</p>
+      <button type="button" class="btn btn-primary" data-close-devis data-i18n="devis.close">Fermer</button>
+    </div>
+  </dialog>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/apps-data.js"></script>
+  <!-- Visionneuse de photos -->
+  <dialog id="lightbox" class="lightbox">
+    <button type="button" class="lb-close" data-i18n-attr="aria-label:lb.close" aria-label="Fermer">×</button>
+    <button type="button" class="lb-nav lb-prev" data-i18n-attr="aria-label:lb.prev" aria-label="Photo précédente">‹</button>
+    <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+    <button type="button" class="lb-nav lb-next" data-i18n-attr="aria-label:lb.next" aria-label="Photo suivante">›</button>
+  </dialog>
+
+  <script src="js/main.js"></script>
+  <script src="js/actualites.js"></script>
+  <script src="js/news.js"></script>
+</body>
+</html>
