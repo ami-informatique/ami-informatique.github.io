@@ -70,6 +70,9 @@ content:
       - name: playStore
         label: Lien Google Play (facultatif)
         type: string
+      - name: playStoreBientot
+        label: "Afficher l'étiquette « Bientôt sur Google Play » (tant que le lien Google Play est vide)"
+        type: boolean
       - name: apk
         label: Fichier à télécharger — APK (Android) ou EXE / MSI / ZIP (Windows) (facultatif)
         type: file
