@@ -75,6 +75,7 @@ var AMI_APPS = (function () {
         bientot: !!a.bientot,
         playStore: String(a.playStore || "").trim(),
         apk: chemin(a.apk) || String(a.lienApk || "").trim(),
+        fichier2: chemin(a.fichier2) || String(a.lienFichier2 || "").trim(),
         politiqueDate: a.politiqueDate || "",
         politique: a.politique || {},
         commentaires: coms.filter(function (c) { return c && c.texte; }).map(function (c) {
@@ -97,6 +98,16 @@ var AMI_APPS = (function () {
     return location.protocol === "file:" ? t("app.localOnly") : t("app.loadError");
   }
 
+  // Libellé du bouton selon le type de fichier (.apk, .exe/.msi, .zip…)
+  function libelleTelechargement(url) {
+    var u = String(url || "").split(/[?#]/)[0].toLowerCase();
+    var ext = (u.match(/\.([a-z0-9]+)$/) || [])[1] || "";
+    if (ext === "apk") return t("apps.apk");
+    if (ext === "exe" || ext === "msi") return t("dl.installer") + " (." + ext + ")";
+    if (ext === "zip") return t("dl.zip");
+    return t("app.download");
+  }
+
   function param(nom) {
     var m = new RegExp("[?&]" + nom + "=([^&#]*)").exec(location.search);
     return m ? decodeURIComponent(m[1]) : "";
@@ -104,6 +115,6 @@ var AMI_APPS = (function () {
 
   return {
     charger: charger, esc: esc, tr: tr, chemin: chemin, dateLisible: dateLisible,
-    texteRiche: texteRiche, messageHorsLigne: messageHorsLigne, param: param, langue: langue, t: t
+    texteRiche: texteRiche, libelleTelechargement: libelleTelechargement, messageHorsLigne: messageHorsLigne, param: param, langue: langue, t: t
   };
 })();
