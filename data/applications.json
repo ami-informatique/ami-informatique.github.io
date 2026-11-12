@@ -11,6 +11,7 @@
       "ar": "تطبيق أندرويد لبيع تذاكر الواي فاي على أجهزة التوجيه MikroTik الخاصة بكم: إنشاء التذاكر، وإدارة البائعين، والمبيعات والتقارير. يعمل دون اتصال بالإنترنت."
     },
     "bientot": false,
+    "playStoreBientot": true,
     "lienApk": "https://ami-informatique.github.io/apps/ami-ticket/AMITicket-1.0.0.apk",
     "politiqueDate": "2026-11-11",
     "politique": {
@@ -31,6 +32,7 @@
       "ar": "برنامج لنظام ويندوز يقوم بإعداد بوابة واي فاي (Hotspot) على أجهزة التوجيه MikroTik الخاصة بكم في دقيقتين، خطوة بخطوة، دون الحاجة إلى خبرة."
     },
     "bientot": false,
+    "playStoreBientot": false,
     "lienApk": "https://ami-informatique.github.io/apps/hotspot-express/HotspotExpress.exe",
     "lienFichier2": "https://ami-informatique.github.io/apps/hotspot-express/HotspotExpress.zip",
     "politiqueDate": "2026-11-09",
