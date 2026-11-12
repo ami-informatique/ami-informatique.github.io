@@ -1,6 +1,5 @@
 [
   {
-    "id": "lancement-site-web",
     "date": "2026-11-06",
     "categorie": "annonce",
     "titre": {
@@ -13,7 +12,25 @@
       "en": "AMI Informatique now has its own website, in French, English and Arabic. You'll find our services (maintenance, networking, software engineering, websites and training), our apps, and you can request a free quote online.\n\nThis section will feature our upcoming training sessions, certificate ceremonies and projects.",
       "ar": "أصبح لدى AMI Informatique موقعها الإلكتروني الخاص، باللغات الفرنسية والإنجليزية والعربية. ستجدون فيه خدماتنا (الصيانة، والشبكات، وهندسة البرمجيات، والمواقع الإلكترونية، والتكوين)، وتطبيقاتنا، ويمكنكم طلب عرض سعر مجاني عبر الإنترنت.\n\nسننشر في هذا القسم دوراتنا التكوينية القادمة، وحفلات تسليم الشهادات، وإنجازاتنا."
     },
-    "photos": [],
-    "documents": []
+    "id": "lancement-site-web"
+  },
+  {
+    "date": "2026-11-12",
+    "categorie": "realisation",
+    "titre": {
+      "fr": "Nos applications AMI Ticket et Hotspot Express sont disponibles",
+      "en": "Our apps AMI Ticket and Hotspot Express are now available",
+      "ar": "تطبيقانا AMI Ticket و Hotspot Express متوفران الآن"
+    },
+    "texte": {
+      "fr": "AMI Informatique a le plaisir d'annoncer la sortie de ses deux premières applications, conçues pour les gérants de réseaux Wi-Fi MikroTik.\n\nAMI Ticket (Android) : vendez vos tickets Wi-Fi depuis votre téléphone, gérez vos vendeurs, vos ventes et vos rapports, même sans Internet.\n\nHotspot Express (Windows 7 à 11) : configurez un portail Wi-Fi (hotspot) sur votre routeur MikroTik en 2 minutes, étape par étape, sans être expert.\n\nLes deux applications sont à télécharger dans la rubrique « Applications » de ce site. Pour la licence ou toute assistance, contactez-nous sur WhatsApp au +227 92 91 13 41.",
+      "en": "AMI Informatique is pleased to announce the release of its first two apps, designed for MikroTik Wi-Fi network operators.\n\nAMI Ticket (Android): sell your Wi-Fi tickets from your phone and manage your sellers, sales and reports, even without internet.\n\nHotspot Express (Windows 7 to 11): set up a Wi-Fi portal (hotspot) on your MikroTik router in 2 minutes, step by step, no expertise needed.\n\nBoth apps can be downloaded from the \"Apps\" section of this website. For licenses or support, contact us on WhatsApp at +227 92 91 13 41.",
+      "ar": "يسرّ AMI Informatique أن تعلن عن إصدار أول تطبيقين لها، المصمَّمين لمسيّري شبكات الواي فاي MikroTik.\n\nAMI Ticket (أندرويد): بيعوا تذاكر الواي فاي من هاتفكم، وأديروا البائعين والمبيعات والتقارير، حتى دون اتصال بالإنترنت.\n\nHotspot Express (ويندوز 7 إلى 11): قوموا بإعداد بوابة واي فاي (Hotspot) على جهاز التوجيه MikroTik الخاص بكم في دقيقتين، خطوة بخطوة، دون الحاجة إلى خبرة.\n\nيمكن تحميل التطبيقين من قسم «تطبيقاتنا» في هذا الموقع. للحصول على الترخيص أو أي مساعدة، تواصلوا معنا عبر واتساب على الرقم ‎+227 92 91 13 41."
+    },
+    "photos": [
+      "assets/actualites/icone_ami_ticket.png",
+      "assets/actualites/icone_hotspot_express_config.png"
+    ],
+    "id": "lancement-applications"
   }
 ]
