@@ -3,7 +3,7 @@
   "versionCode": 16,
   "versionName": "1.0.0",
   "minVersionCode": 0,
-  "apkUrl": "https://ami-informatique.github.io/apps/ami-ticket/AMITicket-1.0.0.apk",
+  "apkUrl": "https://github.com/ami-informatique/ami-informatique.github.io/releases/download/ami-ticket-v1.0.0/AMITicket-1.0.0.apk",
   "privacyPolicyUrl": "https://ami-informatique.github.io/confidentialite-app.html?app=ami-ticket",
   "releaseDate": "2026-11-12",
   "changelog": {
