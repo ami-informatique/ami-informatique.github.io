@@ -74,6 +74,7 @@ var AMI_APPS = (function () {
         description: a.description || {},
         bientot: !!a.bientot,
         playStore: String(a.playStore || "").trim(),
+        playStoreBientot: !!a.playStoreBientot,
         apk: chemin(a.apk) || String(a.lienApk || "").trim(),
         fichier2: chemin(a.fichier2) || String(a.lienFichier2 || "").trim(),
         politiqueDate: a.politiqueDate || "",

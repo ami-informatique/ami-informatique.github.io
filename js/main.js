@@ -170,6 +170,7 @@
       if (app.plateforme) tags += '<span class="tag">' + esc(app.plateforme) + "</span>";
       if (app.version) tags += '<span class="tag"><bdi>v' + esc(app.version) + "</bdi></span>";
       if (app.bientot) tags += '<span class="tag tag-soon">' + esc(t("apps.soon")) + "</span>";
+      if (app.playStoreBientot && !app.playStore) tags += '<span class="tag tag-play">' + esc(t("apps.playSoon")) + "</span>";
       var nb = app.commentaires.length;
 
       var boutons = '<a class="btn btn-primary" href="' + page + '">' + esc(t("apps.details")) + "</a>";

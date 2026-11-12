@@ -55,7 +55,8 @@ var I18N = {
 
     "apps.kicker": "Nos applications",
     "apps.title": "Des outils conçus par AMI Informatique",
-    "apps.lead": "Nos applications développées en interne, disponibles sur Google Play ou en téléchargement direct.",
+    "apps.lead": "Nos applications développées en interne, disponibles en téléchargement direct sur ce site. Bientôt aussi sur Google Play.",
+    "apps.playSoon": "Bientôt sur Google Play",
     "apps.noscript": "Activez JavaScript pour voir la liste de nos applications.",
     "apps.soon": "Bientôt disponible",
     "apps.soonBtn": "Bientôt",
@@ -214,7 +215,8 @@ var I18N = {
 
     "apps.kicker": "Our apps",
     "apps.title": "Tools built by AMI Informatique",
-    "apps.lead": "Apps developed in-house, available on Google Play or as a direct download.",
+    "apps.lead": "Apps developed in-house, available as a direct download from this website. Coming soon to Google Play.",
+    "apps.playSoon": "Coming soon to Google Play",
     "apps.noscript": "Enable JavaScript to see the list of our apps.",
     "apps.soon": "Coming soon",
     "apps.soonBtn": "Coming soon",
@@ -373,7 +375,8 @@ var I18N = {
 
     "apps.kicker": "تطبيقاتنا",
     "apps.title": "أدوات من تطوير AMI Informatique",
-    "apps.lead": "تطبيقات طوّرناها بأنفسنا، متوفرة على Google Play أو للتحميل المباشر.",
+    "apps.lead": "تطبيقات طوّرناها بأنفسنا، متوفرة للتحميل المباشر من هذا الموقع، وقريباً على Google Play.",
+    "apps.playSoon": "قريباً على Google Play",
     "apps.noscript": "يرجى تفعيل JavaScript لعرض قائمة تطبيقاتنا.",
     "apps.soon": "قريباً",
     "apps.soonBtn": "قريباً",
