@@ -78,6 +78,14 @@ content:
       - name: lienApk
         label: "Ou lien externe vers le fichier (ex. GitHub Releases), s'il est trop gros"
         type: string
+      - name: fichier2
+        label: "Second fichier (facultatif) — ex. version ZIP en plus de l'installateur EXE"
+        type: file
+        options:
+          media: apk
+      - name: lienFichier2
+        label: "Ou lien externe vers le second fichier (ex. GitHub Releases)"
+        type: string
       - name: politiqueDate
         label: Date de mise à jour de la politique de confidentialité
         type: date
