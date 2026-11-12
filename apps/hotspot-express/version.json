@@ -3,12 +3,18 @@
   "versionCode": 1,
   "versionName": "1.0.0",
   "minVersionCode": 1,
-  "downloadUrl": "",
+  "downloadUrl": "https://ami-informatique.github.io/apps/hotspot-express/HotspotExpress.exe",
   "privacyPolicyUrl": "https://ami-informatique.github.io/confidentialite-app.html?app=hotspot-express",
-  "releaseDate": "2026-11-09",
+  "releaseDate": "2026-11-12",
   "changelog": {
-    "fr": ["Première version publique"],
-    "en": ["First public release"],
-    "ar": ["الإصدار العام الأول"]
+    "fr": [
+      "Première version publique"
+    ],
+    "en": [
+      "First public release"
+    ],
+    "ar": [
+      "الإصدار العام الأول"
+    ]
   }
 }
