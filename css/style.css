@@ -695,3 +695,7 @@ a.app-icon { text-decoration: none; }
 
 /* Étiquette « Bientôt sur Google Play » */
 .tag-play { background: #E8F5EC; color: #1A7F43; }
+
+/* Compteur de téléchargements */
+.tag-dl { display: inline-flex; align-items: center; gap: 4px; background: #EEF2FF; color: #2B3A8C; }
+.tag-dl svg { width: 13px; height: 13px; fill: currentColor; flex: none; }

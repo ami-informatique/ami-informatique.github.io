@@ -109,6 +109,44 @@ var AMI_APPS = (function () {
     return t("app.download");
   }
 
+  // ===== Compteur de téléchargements (GitHub Releases) =====
+  // Additionne download_count de tous les fichiers des Releases dont le tag
+  // commence par l'identifiant de l'application (ex. « ami-ticket-v1.0.0 »).
+  var dlCache = null;
+  function telechargements() {
+    if (dlCache) return dlCache;
+    var repo = (window.AMI_CONFIG && AMI_CONFIG.githubRepo) || "";
+    var CLE = "ami-dl-v1";
+    try {
+      var c = JSON.parse(sessionStorage.getItem(CLE) || "null");
+      if (c && Date.now() - c.t < 30 * 60 * 1000) return (dlCache = Promise.resolve(c.d));
+    } catch (e) {}
+    if (!repo) return (dlCache = Promise.resolve({}));
+    dlCache = fetch("https://api.github.com/repos/" + repo + "/releases?per_page=100")
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (rel) {
+        var tot = {};
+        (rel || []).forEach(function (x) {
+          if (x.draft) return;
+          var m = /^(.+?)-v?\d/i.exec(x.tag_name || "");
+          if (!m) return;
+          var id = slug(m[1]);
+          (x.assets || []).forEach(function (a) { tot[id] = (tot[id] || 0) + (a.download_count || 0); });
+        });
+        try { sessionStorage.setItem(CLE, JSON.stringify({ t: Date.now(), d: tot })); } catch (e) {}
+        return tot;
+      })
+      .catch(function () { return {}; });   // en cas d'erreur : on n'affiche simplement pas le compteur
+    return dlCache;
+  }
+  function badgeTelechargements(n) {
+    if (!n) return "";
+    var loc = { fr: "fr-FR", en: "en-GB", ar: "ar-u-nu-latn" }[langue()] || "fr-FR";
+    var nb = n.toLocaleString(loc);
+    var txt = t(n > 1 ? "dl.many" : "dl.one").replace("{n}", nb);
+    return '<span class="tag tag-dl" title="' + esc(txt) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.6l3.3-3.3 1.4 1.4L12 16.4 6.3 10.7l1.4-1.4L11 12.6V3ZM4 18h16v2H4v-2Z"/></svg><bdi>' + esc(txt) + "</bdi></span>";
+  }
+
   function param(nom) {
     var m = new RegExp("[?&]" + nom + "=([^&#]*)").exec(location.search);
     return m ? decodeURIComponent(m[1]) : "";
@@ -116,6 +154,6 @@ var AMI_APPS = (function () {
 
   return {
     charger: charger, esc: esc, tr: tr, chemin: chemin, dateLisible: dateLisible,
-    texteRiche: texteRiche, libelleTelechargement: libelleTelechargement, messageHorsLigne: messageHorsLigne, param: param, langue: langue, t: t
+    texteRiche: texteRiche, libelleTelechargement: libelleTelechargement, telechargements: telechargements, badgeTelechargements: badgeTelechargements, messageHorsLigne: messageHorsLigne, param: param, langue: langue, t: t
   };
 })();

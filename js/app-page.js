@@ -7,6 +7,7 @@
   var section = document.getElementById("commentaires");
   var id = A.param("app");
   var app = null;
+  var DL = {};
 
   var ICONE_PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5v17a1 1 0 0 0 1.5.86l14.5-8.5a1 1 0 0 0 0-1.72L6.5 2.64A1 1 0 0 0 5 3.5Z"/></svg>';
   var ICONE_DL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.6l3.3-3.3 1.4 1.4L12 16.4 6.3 10.7l1.4-1.4L11 12.6V3ZM4 18h16v2H4v-2Z"/></svg>';
@@ -29,6 +30,7 @@
     if (app.version) tags += '<span class="tag"><bdi>v' + esc(app.version) + "</bdi></span>";
     if (app.bientot) tags += '<span class="tag tag-soon">' + esc(t("apps.soon")) + "</span>";
     if (app.playStoreBientot && !app.playStore) tags += '<span class="tag tag-play">' + esc(t("apps.playSoon")) + "</span>";
+    tags += A.badgeTelechargements(DL[app.id]);
 
     var boutons = "";
     if (!app.bientot && app.playStore) boutons += '<a class="btn btn-play" href="' + esc(app.playStore) + '" target="_blank" rel="noopener">' + ICONE_PLAY + esc(t("apps.play")) + "</a>";
@@ -83,6 +85,7 @@
     app = liste.filter(function (a) { return a.id === id; })[0] || null;
     if (!app) return erreur(t("app.notFound"));
     rendre();
+    A.telechargements().then(function (d) { DL = d || {}; rendre(); });
   }).catch(function () { erreur(A.messageHorsLigne()); });
 
   document.addEventListener("langchange", function () { if (app) rendre(); });

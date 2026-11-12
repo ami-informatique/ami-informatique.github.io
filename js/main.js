@@ -148,6 +148,7 @@
   var grid = document.getElementById("apps-grid");
   var listeConf = document.getElementById("apps-privacy-list");
   var APPS = null;
+  var DL = {};   // nombre de téléchargements par application
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -171,6 +172,7 @@
       if (app.version) tags += '<span class="tag"><bdi>v' + esc(app.version) + "</bdi></span>";
       if (app.bientot) tags += '<span class="tag tag-soon">' + esc(t("apps.soon")) + "</span>";
       if (app.playStoreBientot && !app.playStore) tags += '<span class="tag tag-play">' + esc(t("apps.playSoon")) + "</span>";
+      tags += AMI_APPS.badgeTelechargements(DL[app.id]);
       var nb = app.commentaires.length;
 
       var boutons = '<a class="btn btn-primary" href="' + page + '">' + esc(t("apps.details")) + "</a>";
@@ -208,6 +210,7 @@
   if ((grid || listeConf) && window.AMI_APPS) {
     AMI_APPS.charger().then(function (liste) {
       APPS = liste; rendreApps(); rendreListeConf();
+      AMI_APPS.telechargements().then(function (d) { DL = d || {}; rendreApps(); });
     }).catch(function () {
       var msg = '<p class="news-empty">' + esc(AMI_APPS.messageHorsLigne()) + "</p>";
       if (grid) grid.innerHTML = msg;
