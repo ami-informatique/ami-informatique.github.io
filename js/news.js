@@ -58,7 +58,13 @@
           return '<button type="button" class="news-thumb" data-news="' + esc(a.id) + '" data-idx="' + (i + 1) + '">' +
             '<img src="' + esc(photoSrc(p)) + '" alt="' + esc(photoLeg(p) || t("news.photoAlt")) + '" loading="lazy">' + reste + "</button>";
         }).join("");
-        cover =
+        if (photos.length === 2 || photos.length === 3) {
+          // 2 ou 3 photos : affichées côte à côte, à taille égale
+          cover = '<div class="news-duo n' + photos.length + '">' + photos.map(function (p, i) {
+            return '<button type="button" class="news-duo-item" data-news="' + esc(a.id) + '" data-idx="' + i + '">' +
+              '<img src="' + esc(photoSrc(p)) + '" alt="' + esc(photoLeg(p) || tr(a.titre)) + '" loading="lazy"></button>';
+          }).join("") + "</div>";
+        } else cover =
           '<button type="button" class="news-cover" data-news="' + esc(a.id) + '" data-idx="0">' +
             '<img src="' + esc(photoSrc(photos[0])) + '" alt="' + esc(photoLeg(photos[0]) || tr(a.titre)) + '" loading="lazy">' +
           "</button>" +
