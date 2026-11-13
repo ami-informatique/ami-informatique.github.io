@@ -190,9 +190,11 @@
     if (!box || !act || typeof ABONNEMENT === "undefined") return;
     var ICONE_WA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3Z"/></svg>';
     var ICONE_FB = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12Z"/></svg>';
+    var ICONE_YT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>';
     var html = "";
     if (ABONNEMENT.whatsappChaine) html += '<a class="btn btn-whatsapp" href="' + esc(ABONNEMENT.whatsappChaine) + '" target="_blank" rel="noopener">' + ICONE_WA + esc(t("news.follow.wa")) + "</a>";
     if (ABONNEMENT.facebook) html += '<a class="btn btn-fb" href="' + esc(ABONNEMENT.facebook) + '" target="_blank" rel="noopener">' + ICONE_FB + esc(t("news.follow.fb")) + "</a>";
+    if (ABONNEMENT.youtube) html += '<a class="btn btn-yt" href="' + esc(ABONNEMENT.youtube) + '" target="_blank" rel="noopener">' + ICONE_YT + esc(t("news.follow.yt")) + "</a>";
     act.innerHTML = html;
     box.hidden = !html;
   }

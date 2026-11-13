@@ -11,5 +11,6 @@
 /* Laisser "" pour masquer un bouton */
 const ABONNEMENT = {
   whatsappChaine: "https://whatsapp.com/channel/0029VbECfURDDmFUyXTVZV2S",
-  facebook: "https://www.facebook.com/share/1Entgv3NWJ/"
+  facebook: "https://www.facebook.com/share/1Entgv3NWJ/",
+  youtube: "https://www.youtube.com/@AMIInformatique2017"
 };
