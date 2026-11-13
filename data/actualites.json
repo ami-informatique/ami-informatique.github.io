@@ -47,7 +47,9 @@
       "ar": "اكتشفوا بالفيديو تطبيقينا AMI Ticket و Hotspot Express: بيعوا تذاكر الواي فاي من هاتفكم، وقوموا بتهيئة شبكة MikroTik الخاصة بكم في دقيقتين. التحميل مجاني في قسم التطبيقات."
     },
     "photos": [
-      "assets/actualites/Affiche-applications-AMI-Informatique.png"
+      "assets/actualites/affiche-applications-ami.jpg",
+      "assets/actualites/affiche-ami-ticket.jpg",
+      "assets/actualites/affiche-hotspot-express.jpg"
     ],
     "video": "assets/videos/pub-ami-applications-720p.mp4",
     "id": "pub-video-applications"
