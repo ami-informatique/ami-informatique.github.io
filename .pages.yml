@@ -24,6 +24,11 @@ media:
     input: telechargements
     output: telechargements
     extensions: [apk, exe, msi, zip]
+  - name: videos
+    label: Vidéos (MP4, moins de 25 Mo)
+    input: assets/videos
+    output: assets/videos
+    extensions: [mp4, webm]
 
 content:
   # ---------------------------------------------------------
@@ -168,6 +173,14 @@ content:
           media: photos
           multiple:
             max: 30
+      - name: video
+        label: "Vidéo (MP4 de moins de 25 Mo — elle se lit directement sur le site)"
+        type: file
+        options:
+          media: videos
+      - name: lienVideo
+        label: "Ou lien d'une vidéo (YouTube, ou adresse d'un fichier MP4) — pour les vidéos plus lourdes"
+        type: string
       - name: documents
         label: Documents à télécharger
         type: object
