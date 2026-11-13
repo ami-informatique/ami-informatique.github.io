@@ -32,6 +32,21 @@
     return String(txt).split(/\n\s*\n/).map(function (p) { return "<p>" + esc(p).replace(/\n/g, "<br>") + "</p>"; }).join("");
   }
 
+  // Vidéo : fichier MP4 du site, lien MP4, ou lien YouTube
+  function videoHtml(a) {
+    var v = a.video;
+    if (!v) return "";
+    var yt = /(?:youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/|embed\/)|youtu\.be\/)([\w-]{11})/.exec(v);
+    if (yt) {
+      var vertical = /shorts\//.test(v);
+      return '<div class="news-video news-video-yt' + (vertical ? " vertical" : "") + '"><iframe src="https://www.youtube-nocookie.com/embed/' + yt[1] +
+        '" title="' + esc(tr(a.titre)) + '" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>';
+    }
+    var poster = (a.photos || [])[0];
+    return '<div class="news-video"><video controls playsinline preload="metadata"' + (poster ? ' poster="' + esc(photoSrc(poster)) + '"' : "") +
+      ' src="' + esc(v) + '"></video></div>';
+  }
+
   var ICONE_DOC = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5L14 3.5ZM11 11v4.6l-1.8-1.8-1.4 1.4L12 19.4l4.2-4.2-1.4-1.4-1.8 1.8V11h-2Z"/></svg>';
 
   function triees() {
@@ -70,6 +85,14 @@
           "</button>" +
           (vignettes ? '<div class="news-thumbs">' + vignettes + "</div>" : "");
       }
+      if (a.video) {
+        // Avec une vidéo : la vidéo en grand, les photos en vignettes dessous
+        cover = videoHtml(a) + (photos.length ? '<div class="news-thumbs">' + photos.slice(0, 3).map(function (p, i) {
+          var reste = (i === 2 && photos.length > 3) ? '<span class="news-thumb-more">+' + (photos.length - 3) + "</span>" : "";
+          return '<button type="button" class="news-thumb" data-news="' + esc(a.id) + '" data-idx="' + i + '">' +
+            '<img src="' + esc(photoSrc(p)) + '" alt="' + esc(photoLeg(p) || t("news.photoAlt")) + '" loading="lazy">' + reste + "</button>";
+        }).join("") + "</div>" : "");
+      }
       var docs = (a.documents || []).filter(function (d) { return d && d.fichier; });
       var docsHtml = docs.length
         ? '<div class="news-docs"><p class="news-docs-title">' + esc(t("news.docs")) + "</p><ul>" +
@@ -81,7 +104,7 @@
       var long = texte.length > 260;
 
       return (
-        '<article class="news-card' + (photos.length ? "" : " news-card-nophoto") + '" id="actu-' + esc(a.id) + '">' +
+        '<article class="news-card' + (photos.length || a.video ? "" : " news-card-nophoto") + '" id="actu-' + esc(a.id) + '">' +
           cover +
           '<div class="news-body">' +
             '<div class="news-meta"><span class="tag tag-cat cat-' + esc(a.categorie) + '">' + esc(t("cat." + a.categorie)) + "</span>" +
@@ -192,6 +215,13 @@
         categorie: a.categorie || "annonce",
         titre: a.titre, texte: a.texte,
         photos: (photos || []).filter(Boolean),
+        video: (function () {
+          var v = a.video;
+          if (Array.isArray(v)) v = v[0];
+          v = String(v || "").trim();
+          if (v && !/^(https?:)?\/\//.test(v)) v = chemin(v);
+          return v || String(a.lienVideo || "").trim();
+        })(),
         documents: docs
       };
     });
