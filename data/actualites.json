@@ -32,5 +32,24 @@
       "assets/actualites/icone-hotspot-express.jpg"
     ],
     "id": "lancement-applications"
+  },
+  {
+    "date": "2026-11-13",
+    "categorie": "annonce",
+    "titre": {
+      "fr": "Votre Wi-Fi Zone, simple et rentable",
+      "en": "Your Wi-Fi Zone, simple and profitable",
+      "ar": "منطقة الواي فاي الخاصة بك، بسيطة ومربحة"
+    },
+    "texte": {
+      "fr": "Découvrez en vidéo nos applications AMI Ticket et Hotspot Express : vendez vos tickets Wi-Fi depuis votre téléphone et installez votre réseau MikroTik en 2 minutes. Téléchargement gratuit dans la rubrique Applications.",
+      "en": "Discover our apps AMI Ticket and Hotspot Express in video: sell your Wi-Fi tickets from your phone and set up your MikroTik network in 2 minutes. Free download in the Applications section.",
+      "ar": "اكتشفوا بالفيديو تطبيقينا AMI Ticket و Hotspot Express: بيعوا تذاكر الواي فاي من هاتفكم، وقوموا بتهيئة شبكة MikroTik الخاصة بكم في دقيقتين. التحميل مجاني في قسم التطبيقات."
+    },
+    "photos": [
+      "assets/actualites/Affiche-applications-AMI-Informatique.png"
+    ],
+    "video": "assets/videos/pub-ami-applications-720p.mp4",
+    "id": "pub-video-applications"
   }
 ]
