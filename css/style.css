@@ -711,3 +711,8 @@ a.app-icon { text-decoration: none; }
 .btn-yt { background: #E62117; color: var(--white); }
 .btn-yt:hover { background: #b8180f; }
 .btn-yt svg { width: 20px; height: 20px; fill: currentColor; }
+
+/* Bouton « Télécharger la vidéo » sous une vidéo d'actualité */
+.news-video-dl { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 16px; background: var(--blue); color: var(--white); font-weight: 700; text-decoration: none; }
+.news-video-dl:hover { background: var(--blue-dark); }
+.news-video-dl svg { width: 20px; height: 20px; fill: currentColor; flex: none; }

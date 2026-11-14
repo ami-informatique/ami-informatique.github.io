@@ -43,8 +43,12 @@
         '" title="' + esc(tr(a.titre)) + '" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>';
     }
     var poster = (a.photos || [])[0];
+    var nom = (String((a.titre && a.titre.fr) || tr(a.titre) || "video").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60) || "video") + ".mp4";
     return '<div class="news-video"><video controls playsinline preload="metadata"' + (poster ? ' poster="' + esc(photoSrc(poster)) + '"' : "") +
-      ' src="' + esc(v) + '"></video></div>';
+      ' src="' + esc(v) + '"></video></div>' +
+      '<a class="news-video-dl" href="' + esc(v) + '" download="' + esc(nom) + '">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.6l3.3-3.3 1.4 1.4L12 16.4 6.3 10.7l1.4-1.4L11 12.6V3ZM4 18h16v2H4v-2Z"/></svg>' +
+      esc(t("news.dlVideo")) + "</a>";
   }
 
   var ICONE_DOC = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5L14 3.5ZM11 11v4.6l-1.8-1.8-1.4 1.4L12 19.4l4.2-4.2-1.4-1.4-1.8 1.8V11h-2Z"/></svg>';
