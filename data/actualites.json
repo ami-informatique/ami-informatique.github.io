@@ -110,5 +110,24 @@
     ],
     "video": "assets/videos/tuto-3-vendeurs.mp4",
     "id": "tuto-ami-ticket-vendeurs"
+  },
+  {
+    "date": "2026-11-14",
+    "categorie": "formation",
+    "titre": {
+      "fr": "Tutoriel AMI Ticket : portail captif et ticket fidélité",
+      "en": "AMI Ticket tutorial: captive portal and loyalty ticket",
+      "ar": "شرح AMI Ticket: بوابة تسجيل الدخول وتذكرة الوفاء"
+    },
+    "texte": {
+      "fr": "Personnalisez la page de connexion de votre Wi-Fi Zone avec votre logo et vos couleurs, puis récompensez vos clients fidèles : après plusieurs tickets du même forfait, l’application leur offre automatiquement un accès gratuit.",
+      "en": "Customise your Wi-Fi Zone login page with your logo and colours, then reward loyal customers: after several tickets of the same plan, the app automatically gives them free access.",
+      "ar": "خصّصوا صفحة تسجيل الدخول لمنطقة الواي فاي بشعاركم وألوانكم، ثم كافئوا زبائنكم الأوفياء: بعد عدة تذاكر من نفس الباقة، يمنحهم التطبيق تلقائيًا دخولًا مجانيًا."
+    },
+    "photos": [
+      "assets/actualites/tuto-4-couverture.jpg"
+    ],
+    "video": "assets/videos/tuto-4-portail-fidelite.mp4",
+    "id": "tuto-ami-ticket-portail-fidelite"
   }
 ]
