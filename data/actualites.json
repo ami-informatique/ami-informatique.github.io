@@ -129,5 +129,24 @@
     ],
     "video": "assets/videos/tuto-4-portail-fidelite.mp4",
     "id": "tuto-ami-ticket-portail-fidelite"
+  },
+  {
+    "date": "2026-11-14",
+    "categorie": "formation",
+    "titre": {
+      "fr": "Tutoriel AMI Ticket : relier l’application à Telegram",
+      "en": "AMI Ticket tutorial: connect the app to Telegram",
+      "ar": "شرح AMI Ticket: ربط التطبيق بتيليغرام"
+    },
+    "texte": {
+      "fr": "Créez votre bot avec BotFather et reliez-le à AMI Ticket pour créer des profils, envoyer des lots de tickets et recevoir vos rapports de ventes directement sur Telegram.",
+      "en": "Create your bot with BotFather and connect it to AMI Ticket to create profiles, send ticket batches and receive your sales reports right in Telegram.",
+      "ar": "أنشئوا الروبوت الخاص بكم عبر BotFather واربطوه بتطبيق AMI Ticket لإنشاء الباقات وإرسال دفعات التذاكر واستلام تقارير المبيعات مباشرة على تيليغرام."
+    },
+    "photos": [
+      "assets/actualites/tuto-5-couverture.jpg"
+    ],
+    "video": "assets/videos/tuto-5-telegram.mp4",
+    "id": "tuto-ami-ticket-telegram"
   }
 ]
