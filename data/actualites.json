@@ -72,5 +72,24 @@
     ],
     "video": "assets/videos/tuto-1-routeur-profils.mp4",
     "id": "tuto-ami-ticket-routeur-profils"
+  },
+  {
+    "date": "2026-11-14",
+    "categorie": "formation",
+    "titre": {
+      "fr": "Tutoriel AMI Ticket : créer, vendre et imprimer des tickets",
+      "en": "AMI Ticket tutorial: create, sell and print tickets",
+      "ar": "شرح AMI Ticket: إنشاء التذاكر وبيعها وطباعتها"
+    },
+    "texte": {
+      "fr": "Créez un lot de tickets pour la vente dans l’application, vendez un ticket en un geste, et générez vos tickets papier en PDF A4 prêts à imprimer ou à partager.",
+      "en": "Create a ticket batch to sell in the app, sell a ticket in one tap, and generate paper tickets as an A4 PDF ready to print or share.",
+      "ar": "أنشئوا دفعة من التذاكر للبيع داخل التطبيق، وبيعوا تذكرة بلمسة واحدة، واستخرجوا التذاكر الورقية بصيغة PDF A4 جاهزة للطباعة أو المشاركة."
+    },
+    "photos": [
+      "assets/actualites/tuto-2-couverture.jpg"
+    ],
+    "video": "assets/videos/tuto-2-tickets-vente.mp4",
+    "id": "tuto-ami-ticket-tickets-vente"
   }
 ]
