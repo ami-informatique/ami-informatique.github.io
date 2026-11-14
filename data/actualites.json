@@ -53,5 +53,24 @@
     ],
     "video": "assets/videos/pub-ami-applications-720p.mp4",
     "id": "pub-video-applications"
+  },
+  {
+    "date": "2026-11-14",
+    "categorie": "formation",
+    "titre": {
+      "fr": "Tutoriel AMI Ticket : ajouter un routeur et créer des profils",
+      "en": "AMI Ticket tutorial: add a router and create profiles",
+      "ar": "شرح AMI Ticket: إضافة جهاز توجيه وإنشاء الباقات"
+    },
+    "texte": {
+      "fr": "Découvrez comment connecter votre routeur MikroTik à AMI Ticket, tester la connexion et créer vos profils de tickets : prix, durée de validité et volume de données.",
+      "en": "Learn how to connect your MikroTik router to AMI Ticket, test the connection and create your ticket profiles: price, validity and data limit.",
+      "ar": "تعرّفوا على كيفية ربط جهاز التوجيه MikroTik بتطبيق AMI Ticket، واختبار الاتصال، وإنشاء باقات التذاكر: السعر ومدة الصلاحية وحجم البيانات."
+    },
+    "photos": [
+      "assets/actualites/tuto-1-couverture.jpg"
+    ],
+    "video": "assets/videos/tuto-1-routeur-profils.mp4",
+    "id": "tuto-ami-ticket-routeur-profils"
   }
 ]
