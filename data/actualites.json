@@ -91,5 +91,24 @@
     ],
     "video": "assets/videos/tuto-2-tickets-vente.mp4",
     "id": "tuto-ami-ticket-tickets-vente"
+  },
+  {
+    "date": "2026-11-14",
+    "categorie": "formation",
+    "titre": {
+      "fr": "Tutoriel AMI Ticket : gérer vos vendeurs",
+      "en": "AMI Ticket tutorial: manage your sellers",
+      "ar": "شرح AMI Ticket: إدارة البائعين"
+    },
+    "texte": {
+      "fr": "Ajoutez un vendeur avec sa commission, donnez-lui un accès Wi-Fi gratuit, libérez son téléphone si besoin, et remettez-lui un lot de tickets à vendre.",
+      "en": "Add a seller with their commission, give them free Wi-Fi access, free their phone when needed, and hand them a batch of tickets to sell.",
+      "ar": "أضيفوا بائعًا مع عمولته، وامنحوه دخولًا مجانيًا إلى الواي فاي، وحرّروا هاتفه عند الحاجة، وسلّموه دفعة من التذاكر لبيعها."
+    },
+    "photos": [
+      "assets/actualites/tuto-3-couverture.jpg"
+    ],
+    "video": "assets/videos/tuto-3-vendeurs.mp4",
+    "id": "tuto-ami-ticket-vendeurs"
   }
 ]
