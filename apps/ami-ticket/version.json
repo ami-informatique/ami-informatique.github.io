@@ -1,20 +1,35 @@
 {
   "app": "AMI Ticket",
-  "versionCode": 16,
-  "versionName": "1.0.0",
-  "minVersionCode": 0,
-  "apkUrl": "https://github.com/ami-informatique/ami-informatique.github.io/releases/download/ami-ticket-v1.0.0/AMITicket-1.0.0.apk",
+  "versionCode": 20,
+  "versionName": "1.0.4",
+  "minVersionCode": 20,
+  "apkUrl": "https://github.com/ami-informatique/ami-informatique.github.io/releases/download/ami-ticket-v1.0.4/AMITicket-1.0.4.apk",
   "privacyPolicyUrl": "https://ami-informatique.github.io/confidentialite-app.html?app=ami-ticket",
-  "releaseDate": "2026-11-12",
+  "releaseDate": "2026-11-17",
   "changelog": {
     "fr": [
-      "Première version publique"
+      "Cohabitation avec MikroTicket et Mikhmon : plus besoin de les désinstaller ni de les effacer du routeur.",
+      "Les tickets activés ne disparaissent plus au bout d’une minute et expirent à l’heure prévue par leur profil.",
+      "Mise à jour automatique des profils : ils sont renvoyés tout seuls aux routeurs après la mise à jour.",
+      "Recherche de ticket plus simple : tapez l’identifiant, même en partie, le ticket est retrouvé automatiquement.",
+      "Moins de messages inutiles : vous êtes prévenu seulement quand vous ouvrez un routeur qui ne répond pas.",
+      "Les tickets déjà vendus ne changent pas."
     ],
     "en": [
-      "First public release"
+      "Works alongside MikroTicket and Mikhmon: no need to uninstall them or remove them from the router.",
+      "Activated tickets no longer disappear after one minute and expire at the time set by their profile.",
+      "Automatic profile update: profiles are sent back to the routers automatically after the update.",
+      "Easier ticket search: type the ticket ID, even partly, and the ticket is found automatically.",
+      "Fewer useless messages: you are only warned when you open a router that does not respond.",
+      "Tickets already sold are not affected."
     ],
     "ar": [
-      "الإصدار العام الأول"
+      "التوافق مع MikroTicket و Mikhmon: لا حاجة لإلغاء تثبيتهما أو حذفهما من جهاز التوجيه.",
+      "التذاكر المفعّلة لم تعد تختفي بعد دقيقة واحدة، وتنتهي صلاحيتها في الوقت المحدد في باقتها.",
+      "تحديث تلقائي للباقات: تُرسل الباقات تلقائيًا إلى أجهزة التوجيه بعد التحديث.",
+      "بحث أسهل عن التذاكر: اكتب رمز التذكرة، ولو جزئيًا، فيتم العثور عليها تلقائيًا.",
+      "رسائل غير ضرورية أقل: يتم تنبيهك فقط عند فتح جهاز توجيه لا يستجيب.",
+      "التذاكر المباعة مسبقًا لا تتأثر."
     ]
   }
 }
