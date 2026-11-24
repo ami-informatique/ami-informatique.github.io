@@ -716,3 +716,7 @@ a.app-icon { text-decoration: none; }
 .news-video-dl { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 16px; background: var(--blue); color: var(--white); font-weight: 700; text-decoration: none; }
 .news-video-dl:hover { background: var(--blue-dark); }
 .news-video-dl svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
+
+/* Note importante d'une application (champ « Note importante » de Pages CMS) */
+.app-note { margin: 12px 0 0; padding: 10px 12px 10px 14px; background: #FFF6DB; border-left: 4px solid #E0A100; border-radius: 8px; color: #4A3700; font-size: .92rem; font-weight: 600; line-height: 1.45; }
+[dir="rtl"] .app-note { border-left: 0; border-right: 4px solid #E0A100; padding: 10px 14px 10px 12px; }

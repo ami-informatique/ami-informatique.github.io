@@ -72,6 +72,7 @@ var AMI_APPS = (function () {
         version: a.version || "",
         icone: chemin(a.icone),
         description: a.description || {},
+        note: a.note || {},
         bientot: !!a.bientot,
         playStore: String(a.playStore || "").trim(),
         playStoreBientot: !!a.playStoreBientot,

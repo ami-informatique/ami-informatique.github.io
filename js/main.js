@@ -188,6 +188,7 @@
               '<div class="app-meta">' + tags + "</div>" +
             "</div>" +
           "</div>" +
+          (AMI_APPS.tr(app.note).trim() ? '<p class="app-note" dir="auto">' + esc(AMI_APPS.tr(app.note).trim()) + "</p>" : "") +
           '<p class="app-desc">' + esc(AMI_APPS.tr(app.description)) + "</p>" +
           '<div class="app-actions">' + boutons + "</div>" +
           '<div class="app-links">' +

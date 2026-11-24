@@ -47,6 +47,7 @@
             '<div class="app-meta">' + tags + "</div>" +
           "</div>" +
         "</div>" +
+        (tr(app.note).trim() ? '<p class="app-note" dir="auto">' + esc(tr(app.note).trim()) + "</p>" : "") +
         '<p class="app-detail-desc">' + esc(tr(app.description)) + "</p>" +
         '<div class="app-actions">' + boutons + "</div>" +
         '<a class="app-privacy" href="confidentialite-app.html?app=' + encodeURIComponent(app.id) + "&lang=" + A.langue() + '">' + esc(t("apps.privacy")) + "</a>" +
