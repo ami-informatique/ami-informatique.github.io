@@ -10,6 +10,11 @@
       "en": "An Android app to sell Wi-Fi tickets on your MikroTik routers: ticket creation, seller management, sales and reports. Works offline.",
       "ar": "تطبيق أندرويد لبيع تذاكر الواي فاي على أجهزة التوجيه MikroTik الخاصة بكم: إنشاء التذاكر، وإدارة البائعين، والمبيعات والتقارير. يعمل دون اتصال بالإنترنت."
     },
+    "note": {
+      "fr": "Important : si vous utilisez la réception Telegram, refaites-la pour chaque routeur depuis l'application après la mise à jour.",
+      "en": "Important: if you use Telegram reception, redo it for each router from the app after the update.",
+      "ar": "مهم: إذا كنت تستخدم استلام Telegram، فأعد تثبيته لكل راوتر من التطبيق بعد التحديث."
+    },
     "bientot": false,
     "playStoreBientot": true,
     "lienApk": "https://github.com/ami-informatique/ami-informatique.github.io/releases/download/ami-ticket-v1.0.9.12/AMITicket-1.0.9.12.apk",
