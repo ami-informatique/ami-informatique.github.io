@@ -14,7 +14,8 @@
       "Meilleure détection des routeurs hors ligne.",
       "Connexion au routeur plus fiable (plusieurs chemins réseau essayés).",
       "Deux routeurs avec la même adresse ne s'affichent plus « en ligne » ensemble.",
-      "Nouveau : accès vendeur et rôle « Second de l'Admin »."
+      "Nouveau : accès vendeur et rôle « Second de l'Admin ».",
+      "Si vous utilisez la réception Telegram (lots envoyés à distance), refaites-la pour chaque routeur depuis l'application : le script du routeur doit être remplacé par la version corrigée."
     ],
     "en": [
       "A lot now holds at most 200 tickets; Telegram sending uses messages of 100 tickets.",
@@ -23,7 +24,8 @@
       "Better detection of offline routers.",
       "More reliable router connection (several network paths are tried).",
       "Two routers sharing the same address no longer both show as online.",
-      "New: seller access and the \"Admin's deputy\" role."
+      "New: seller access and the \"Admin's deputy\" role.",
+      "If you use Telegram reception (lots sent remotely), redo it for each router from the app: the router script must be replaced by the fixed version."
     ],
     "ar": [
       "تحتوي الدفعة على 200 تذكرة كحد أقصى، ويتم الإرسال عبر تيليغرام في رسائل من 100 تذكرة.",
@@ -32,7 +34,8 @@
       "اكتشاف أفضل لأجهزة التوجيه غير المتصلة.",
       "اتصال أكثر موثوقية بجهاز التوجيه (تجربة عدة مسارات للشبكة).",
       "لم يعد جهازا توجيه يحملان نفس العنوان يظهران متصلين معًا.",
-      "جديد: وصول البائعين ودور «نائب المدير»."
+      "جديد: وصول البائعين ودور «نائب المدير».",
+      "إذا كنت تستخدم استلام Telegram (الدفعات المرسلة عن بُعد)، فأعد تثبيته لكل راوتر من التطبيق: يجب استبدال سكريبت الراوتر بالنسخة المصحّحة."
     ]
   }
 }
