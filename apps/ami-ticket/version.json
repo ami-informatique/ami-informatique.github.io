@@ -8,34 +8,34 @@
   "releaseDate": "2026-11-24",
   "changelog": {
     "fr": [
+      "Si vous utilisez la réception Telegram (lots envoyés à distance), refaites-la pour chaque routeur depuis l'application : le script du routeur doit être remplacé par la version corrigée.",
       "Un lot compte au maximum 200 tickets ; l'envoi par Telegram se fait par messages de 100 tickets.",
       "Réception Telegram corrigée : plus de boucle qui saturait le routeur (réinstallez la réception Telegram depuis l'application).",
       "Un ticket imprimé en thermique puis utilisé est compté vendu automatiquement.",
       "Meilleure détection des routeurs hors ligne.",
       "Connexion au routeur plus fiable (plusieurs chemins réseau essayés).",
       "Deux routeurs avec la même adresse ne s'affichent plus « en ligne » ensemble.",
-      "Nouveau : accès vendeur et rôle « Second de l'Admin ».",
-      "Si vous utilisez la réception Telegram (lots envoyés à distance), refaites-la pour chaque routeur depuis l'application : le script du routeur doit être remplacé par la version corrigée."
+      "Nouveau : accès vendeur et rôle « Second de l'Admin »."
     ],
     "en": [
+      "If you use Telegram reception (lots sent remotely), redo it for each router from the app: the router script must be replaced by the fixed version.",
       "A lot now holds at most 200 tickets; Telegram sending uses messages of 100 tickets.",
       "Telegram reception fixed: no more loop saturating the router (reinstall Telegram reception from the app).",
       "A ticket printed on a thermal printer and then used is counted as sold automatically.",
       "Better detection of offline routers.",
       "More reliable router connection (several network paths are tried).",
       "Two routers sharing the same address no longer both show as online.",
-      "New: seller access and the \"Admin's deputy\" role.",
-      "If you use Telegram reception (lots sent remotely), redo it for each router from the app: the router script must be replaced by the fixed version."
+      "New: seller access and the \"Admin's deputy\" role."
     ],
     "ar": [
+      "إذا كنت تستخدم استلام Telegram (الدفعات المرسلة عن بُعد)، فأعد تثبيته لكل راوتر من التطبيق: يجب استبدال سكريبت الراوتر بالنسخة المصحّحة.",
       "تحتوي الدفعة على 200 تذكرة كحد أقصى، ويتم الإرسال عبر تيليغرام في رسائل من 100 تذكرة.",
       "إصلاح الاستقبال عبر تيليغرام: لم تعد هناك حلقة تُثقل جهاز التوجيه (أعد تثبيت استقبال تيليغرام من التطبيق).",
       "التذكرة المطبوعة على الطابعة الحرارية تُحتسب مباعة تلقائيًا عند استخدامها.",
       "اكتشاف أفضل لأجهزة التوجيه غير المتصلة.",
       "اتصال أكثر موثوقية بجهاز التوجيه (تجربة عدة مسارات للشبكة).",
       "لم يعد جهازا توجيه يحملان نفس العنوان يظهران متصلين معًا.",
-      "جديد: وصول البائعين ودور «نائب المدير».",
-      "إذا كنت تستخدم استلام Telegram (الدفعات المرسلة عن بُعد)، فأعد تثبيته لكل راوتر من التطبيق: يجب استبدال سكريبت الراوتر بالنسخة المصحّحة."
+      "جديد: وصول البائعين ودور «نائب المدير»."
     ]
   }
 }
