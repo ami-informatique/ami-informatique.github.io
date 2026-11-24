@@ -69,6 +69,13 @@ content:
           - { name: fr, label: "Français", type: text, required: true }
           - { name: en, label: "Anglais (facultatif)", type: text }
           - { name: ar, label: "Arabe (facultatif)", type: text }
+      - name: note
+        label: "Note importante (encadré jaune sous la version — laissez vide pour ne rien afficher)"
+        type: object
+        fields:
+          - { name: fr, label: "Français", type: text }
+          - { name: en, label: "Anglais (facultatif)", type: text }
+          - { name: ar, label: "Arabe (facultatif)", type: text }
       - name: bientot
         label: "« Bientôt disponible » (cochez tant que l'application n'est pas téléchargeable)"
         type: boolean
